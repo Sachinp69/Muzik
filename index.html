@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify-Your Favourite Music Is Here</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="media/spotifyLogo.png" type="png">
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="brand" ><img src="media/spotifyLogo.png" alt="Spotify">Spotify</li>
+            <li>Home</li>
+            <li>About</li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="songList">
+            <h3>Best of </h3><h2>Travis Scott<br></h2>
+        <div>
+            <div class="songItem">
+                <img src="media/cover1.jpg" alt="1">
+                <span><b>90210</b></span> 
+                <span class="songListplay"><i class="fa-solid fa-play"></i></span></span>                
+            </div>
+            <div class="songItem">
+                <img src="media/cover2.jpg" alt="2">
+                <span><b>Maria I'm Drunk</b></span> 
+                <span class="songListplay"><i class="fa-solid fa-play"></i></span></span>                
+            </div>
+            <div class="songItem">
+                <img src="media/cover3.jpg" alt="3">
+                <span><b>My Eyes</b></span> 
+                <span class="songListplay"><i class="fa-solid fa-play"></i></span></span>                
+            </div>
+            <div class="songItem">
+                <img src="media/cover4.jpg" alt="4">
+                <span><b>Mafia</b></span> 
+                <span class="songListplay"><i class="fa-solid fa-play"></i></span></span>                
+            </div>
+            <div class="songItem">
+                <img src="media/cover5.jpg" alt="5">
+                <span><b>5% Tint</b></span> 
+                <span class="songListplay"><i class="fa-solid fa-play"></i></span></span>                
+            </div>
+            
+        </div>
+        </div>
+        <div class="songBanner"></div>
+    </div>
+    <div class="bottom">
+        <input type="range" name="range" id="myProgress" value="0" max="" min="0" step="0.0001" >
+        <div class="icons">
+            <!-- fontawesome icons -->
+            <i class="fa-solid fa-backward-step"></i> 
+            <i class="fa-solid fa-play" id="masterPlay"></i>
+            <i class="fa-solid fa-forward-step"></i>
+        </div>
+        <div class="songInfo">
+            <img src="media/musicPlaying.gif" alt="musicPlaying" id="gif">
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/2214e23bb6.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

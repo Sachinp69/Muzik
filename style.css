@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');body{
+    background-color: rgb(170, 163, 154);
+}
+*{
+    margin : 0;
+    padding : 0;
+}
+nav{
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 60px;
+    background-color: black;
+} 
+nav ul li{
+    padding: 0 20px;
+}
+.brand img{
+    height: 45px;
+    width: 45px;
+    padding: 10px;
+}
+.brand{
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+.container{
+    min-height: 75vh;
+    background-color: black;
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    display: flex;
+    margin: 20px auto;
+    width:70% ;
+    padding: 18px;
+    border-radius: 10px;
+    background-image: url(media/travisscott1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.bottom{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    background-color: black;
+    color: white;
+    margin-bottom: 0;
+}
+#myProgress{
+    width: 50vw;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+.icons{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    margin-top: 5px;
+    height: 30px;
+    width: auto;
+    gap: 2.2rem;
+}
+.icons i{
+    color: white;
+    font-size: 30px;
+    cursor:pointer;
+}
+.songList{
+    width: 500px;
+    padding: 10px;
+    height: 90%;
+}
+.songList h1{
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.songList h2{
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.songItem{
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    width: 80%;
+    border-radius: 40px;
+    background-color: rgb(119, 118, 118);
+    color: black;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px ;
+}
+.songItem b{
+    font-family: 'Varela Round', sans-serif;
+}
+.songItem img{
+    height: 45px;
+    border-radius: 30px;
+    margin: 0 30px;
+    border-left: 40px;
+}
+.songListplay i{
+    margin-left: 10px;
+    margin-right: 25px;
+    font-size: larger;
+    cursor: pointer;
+}
+.songInfo{
+    display: flex;
+    position:absolute;
+    left: 0;
+    bottom: 10px;
+}
+.songInfo img{
+    height: 40px;
+    margin-left: 23.2vw;
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+}
