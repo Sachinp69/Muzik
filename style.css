@@ -79,7 +79,7 @@ nav ul li{
 }
 .icons i{
     color: white;
-    font-size: 30px;
+    font-size: 25px;
     cursor:pointer;
 }
 .songList{
@@ -131,8 +131,27 @@ nav ul li{
     bottom: 10px;
 }
 .songInfo img{
-    height: 40px;
-    margin-left: 23.2vw;
+    height: 35px;
+    margin-left: 25vw;
+    margin-bottom: 10px;
     opacity: 0;
     transition: opacity 0.4s ease-in;
+}
+
+/* progress bar styling */
+
+.progressDiv{
+    position: relative;
+    width: 45vw;
+    height: 4px;
+    background-color: rgb(119, 118, 118);
+    border-radius: 2px;
+    margin-bottom: 10px;
+}
+.progress{
+    position: absolute;
+    height: 4px;
+    width: 020%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 2px;
 }
