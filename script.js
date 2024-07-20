@@ -3,11 +3,12 @@
 //intializing the vaiables
 let songIndex=0;
 let masterPlay=document.getElementById('masterPlay');
-let audioElement=new Audio('media/MyEyes.mp3');
+let audioElement=new Audio('media/Mafia.mp3');
 let progress=document.getElementById('progress');
 let gif=document.getElementById('gif');
 let currentTime=document.getElementById('currentTime');
 let totalDuration=document.getElementById('totalDuration');
+let progressDiv=document.getElementById('progressDiv');
 
 
 
@@ -27,22 +28,20 @@ audioElement.addEventListener('loadedmetadata', ()=>{
     totalDuration.textContent = formatTime(audioElement.duration);
 })
 
-// //updating the progress bar
-audioElement.addEventListener('timeupdate',()=>{
-    let progressPercent=parseInt((audioElement.currentTime/audioElement.duration)*100);
-    console.log(progressPercent);
-    progress.style.width=`${progressPercent}%`;
-    currentTime.textContent = formatTime(audioElement.currentTime); //updating current time
-});
-
-// made a fucntoin to show time in aproper format
-
+// made a fucntoin to show time in a proper format
 function formatTime(seconds) {
     const minutes = Math.floor(seconds / 60);
     const secs = Math.floor(seconds % 60);
     return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
 }
 
+//updating the progress bar
+audioElement.addEventListener('timeupdate',()=>{
+    let progressPercent=(audioElement.currentTime/audioElement.duration)*100;
+    progress.style.width=`${progressPercent}%`;
+    //updating current time
+    currentTime.textContent = formatTime(audioElement.currentTime);
+});
 
 //setting the masterPlay to play the song
 masterPlay.addEventListener('click',()=>{
@@ -60,9 +59,19 @@ masterPlay.addEventListener('click',()=>{
     }
 });
 
-//addding seek feature
+//adding seek feature
+progressDiv.addEventListener('click', (e) => {
+    const progressWidth = progressDiv.clientWidth;
+    const clickX = e.offsetX;
+    const newTime = (clickX / progressWidth) * audioElement.duration;
+    audioElement.currentTime = newTime;
+    console.log("Progress Width:", progressWidth);
+    console.log("Click X:", clickX);
+    console.log("New Time:", newTime);
 
-progress.addEventListener('change',()=>{
-    let seekTime = (myProgress.value / 100) * audioElement.duration;
-    audioElement.currentTime = seekTime;
+    // Update progress bar immediately
+    progress.style.width = `${(audioElement.currentTime / audioElement.duration) * 100}%`;
+    // Update current time immediately
+    currentTime.textContent = formatTime(audioElement.currentTime);
 });
+

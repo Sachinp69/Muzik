@@ -143,7 +143,7 @@ nav ul li{
 .progressDiv{
     position: relative;
     width: 45vw;
-    height: 4px;
+    height: 5px;
     background-color: rgb(119, 118, 118);
     border-radius: 2px;
     margin-bottom: 10px;
@@ -155,7 +155,7 @@ nav ul li{
     width: 0%;
     background-color: rgb(255, 255, 255);
     border-radius: 2px;
-    transition: width 0.1s ease;
+    transition: width 0.01s ease;
     cursor: pointer;
 }
 .time{
