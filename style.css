@@ -76,6 +76,7 @@ nav ul li{
     height: 30px;
     width: auto;
     gap: 2.2rem;
+    
 }
 .icons i{
     color: white;
@@ -109,9 +110,10 @@ nav ul li{
     align-items: center;
     margin-bottom: 20px ;
 }
-.songItem b{
-    font-family: 'Varela Round', sans-serif;
+.songName {
+    font-weight: bold;
 }
+
 .songItem img{
     height: 45px;
     border-radius: 30px;

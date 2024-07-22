@@ -17,7 +17,7 @@ let songs=[
     { songName: "Maria I'm Drunk", filePath:"media/MariaImDrunk.mp3", coverPath: 'media/cover2.jpg' },
     { songName: 'My Eyes', filePath:'media/MyEyes.mp3', coverPath: 'media/cover3.jpg' },
     { songName: 'Mafia', filePath:'media/Mafia.mp3', coverPath: 'media/cover4.jpg' },
-    { songName: '5% Tint', filePath:'media/5%Tint.mp3', coverPath: 'media/cover5.jpg' }
+    { songName: '5% Tint', filePath:'media/5Tint.mp3', coverPath: 'media/cover5.jpg' }
 ]
 
 //listening to events
@@ -75,3 +75,36 @@ progressDiv.addEventListener('click', (e) => {
     currentTime.textContent = formatTime(audioElement.currentTime);
 });
 
+//play song exclusively
+const makeAllPlays = ()=>{
+    Array.from(document.getElementsByClassName("songItemPlay")).forEach((element)=>{
+        element.classList.remove('fa-pause');
+        element.classList.add('fa-play');
+    })
+}
+
+Array.from(document.getElementsByClassName("songItemPlay")).forEach((element) => {
+    element.addEventListener('click', (e) => {
+        songIndex = parseInt(e.target.id);
+        
+        // If the clicked song is already playing, pause it
+        if (!audioElement.paused && audioElement.src.includes(songs[songIndex].filePath)) {
+            audioElement.pause();
+            e.target.classList.add('fa-play');
+            e.target.classList.remove('fa-pause');
+            masterPlay.classList.add('fa-play');
+            masterPlay.classList.remove('fa-pause');
+        } else {
+            // Pause any currently playing song and reset its icon
+            makeAllPlays();
+            
+            // Update the audio source and play the new song
+            audioElement.src = songs[songIndex].filePath;
+            audioElement.play();
+            e.target.classList.remove('fa-play');
+            e.target.classList.add('fa-pause');
+            masterPlay.classList.remove('fa-play');
+            masterPlay.classList.add('fa-pause');
+        }
+    });
+});
