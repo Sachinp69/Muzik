@@ -117,6 +117,7 @@ document.getElementById('next').addEventListener('click', ()=>{
     audioElement.src = songs[songIndex].filePath;
     audioElement.currentTime=0;
     audioElement.play();
+    makeAllPlays();
     masterPlay.classList.remove('fa-play');
     masterPlay.classList.add('fa-pause');
 })
@@ -132,6 +133,7 @@ document.getElementById('previous').addEventListener('click', ()=>{
     audioElement.src = songs[songIndex].filePath;
     audioElement.currentTime=0;
     audioElement.play();
+    makeAllPlays();
     masterPlay.classList.remove('fa-play');
     masterPlay.classList.add('fa-pause');
 })
