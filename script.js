@@ -3,7 +3,7 @@
 //intializing the vaiables
 let songIndex=0;
 let masterPlay=document.getElementById('masterPlay');
-let audioElement=new Audio('media/Mafia.mp3');
+let audioElement=new Audio('media/90210.mp3');
 let progress=document.getElementById('progress');
 let gif=document.getElementById('gif');
 let currentTime=document.getElementById('currentTime');
@@ -88,7 +88,7 @@ Array.from(document.getElementsByClassName("songItemPlay")).forEach((element) =>
         songIndex = parseInt(e.target.id);
         
         // If the clicked song is already playing, pause it
-        if (!audioElement.paused && audioElement.src.includes(songs[songIndex].filePath)) {
+        if (!audioElement.paused ) {
             audioElement.pause();
             e.target.classList.add('fa-play');
             e.target.classList.remove('fa-pause');
