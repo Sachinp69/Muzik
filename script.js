@@ -9,9 +9,6 @@ let gif=document.getElementById('gif');
 let currentTime=document.getElementById('currentTime');
 let totalDuration=document.getElementById('totalDuration');
 let progressDiv=document.getElementById('progressDiv');
-
-
-
 let songs=[
     { songName: '90210', filePath:'media/90210.mp3', coverPath: 'media/cover1.jpg' },
     { songName: "Maria I'm Drunk", filePath:"media/MariaImDrunk.mp3", coverPath: 'media/cover2.jpg' },
@@ -115,6 +112,8 @@ document.getElementById('next').addEventListener('click', ()=>{
         songIndex=0;
     }
     else songIndex++;
+    console.log('Next song index:', songIndex);
+    console.log('Playing song:', songs[songIndex].songName);
     audioElement.src = songs[songIndex].filePath;
     audioElement.currentTime=0;
     audioElement.play();
@@ -128,6 +127,8 @@ document.getElementById('previous').addEventListener('click', ()=>{
         songIndex=songs.length-1;
     }
     else songIndex--;
+    console.log('Previous song index:', songIndex);
+    console.log('Playing song:', songs[songIndex].songName);
     audioElement.src = songs[songIndex].filePath;
     audioElement.currentTime=0;
     audioElement.play();
