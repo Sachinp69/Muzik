@@ -109,6 +109,10 @@ nav ul li{
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px ;
+    box-sizing: border-box;
+}
+.playing {
+    border: 2px solid green;
 }
 .songName {
     font-weight: bold;

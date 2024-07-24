@@ -108,3 +108,29 @@ Array.from(document.getElementsByClassName("songItemPlay")).forEach((element) =>
         }
     });
 });
+
+//next song button
+document.getElementById('next').addEventListener('click', ()=>{
+    if(songIndex>3){
+        songIndex=0;
+    }
+    else songIndex++;
+    audioElement.src = songs[songIndex].filePath;
+    audioElement.currentTime=0;
+    audioElement.play();
+    masterPlay.classList.remove('fa-play');
+    masterPlay.classList.add('fa-pause');
+})
+
+//previous song button
+document.getElementById('previous').addEventListener('click', ()=>{
+    if(songIndex<1){
+        songIndex=songs.length-1;
+    }
+    else songIndex--;
+    audioElement.src = songs[songIndex].filePath;
+    audioElement.currentTime=0;
+    audioElement.play();
+    masterPlay.classList.remove('fa-play');
+    masterPlay.classList.add('fa-pause');
+})
