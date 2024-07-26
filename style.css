@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');body{
-    background-color: rgb(170, 163, 154);
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+body{
+    background-color: rgb(225, 152, 247);
 }
 *{
     margin : 0;
@@ -13,14 +14,13 @@ nav{
   position: sticky;
   top: 0;
   z-index: 1;
-  
 }
 nav ul{
     display: flex;
     align-items: center;
     list-style-type: none;
     height: 60px;
-    background-color: black;
+    background-color: rgb(164, 27, 206);
 } 
 nav ul li{
     padding: 0 20px;
@@ -58,7 +58,7 @@ nav ul li{
     justify-content: center;
     align-items: center;
     height: 90px;
-    background-color: black;
+    background-color: rgb(164, 27, 206);
     color: white;
     margin-bottom: 0;
 }
@@ -76,7 +76,6 @@ nav ul li{
     height: 30px;
     width: auto;
     gap: 2.2rem;
-    
 }
 .icons i{
     color: white;
@@ -150,7 +149,7 @@ nav ul li{
     position: relative;
     width: 45vw;
     height: 5px;
-    background-color: rgb(119, 118, 118);
+    background-color: rgb(225, 152, 247);
     border-radius: 2px;
     margin-bottom: 10px;
     cursor: pointer;
