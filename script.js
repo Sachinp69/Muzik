@@ -1,5 +1,3 @@
-// console.log("heyy, its a simple spotify clone")
-
 //intializing the vaiables
 let songIndex=0;
 let masterPlay=document.getElementById('masterPlay');
